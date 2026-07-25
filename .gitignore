@@ -1,0 +1,35 @@
+# 旧 fork 目录（AGPL-3.0 协议，不包含）
+perler-beads/
+
+# 依赖
+node_modules/
+.npm-cache/
+
+# 构建产物
+dist/
+
+# 工作台配置
+.workbuddy/
+
+# 截图与调试文件
+*.png
+*.jpg
+*.jpeg
+!public/assets/*.png
+!public/assets/*.jpg
+debug-*.cjs
+e2e-*.cjs
+gen-examples.cjs
+replace_hero.py
+make_*.py
+
+# 系统
+.gitkeep
+*.log
+
+# 浏览器临时
+.ab-sock/
+.ab-profile/
+
+# 调试脚本
+screenshot-settings.cjs
