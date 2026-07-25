@@ -144,26 +144,26 @@ export default function App() {
       <div className="fixed w-64 h-64 rounded-full bg-pink-200/30 blur-[70px] top-[40%] left-[-30px] pointer-events-none z-0" />
 
       {/* 品牌区 */}
-      <header className="relative z-10 w-full max-w-md flex flex-col items-center pt-10 pb-4 px-4">
-        <div className="soft-card p-4 mb-4 animate-float" style={{ borderRadius: 24 }}>
-          <div className="grid grid-cols-4 gap-2">
+      <header className="relative z-10 w-full max-w-md md:max-w-2xl lg:max-w-4xl flex flex-col items-center pt-8 lg:pt-12 pb-4 px-4">
+        <div className="soft-card p-3 md:p-4 mb-3 md:mb-4 animate-float" style={{ borderRadius: 20 }}>
+          <div className="grid grid-cols-4 md:grid-cols-8 gap-2 md:gap-2.5">
             {BEAD_COLORS.map((c, i) => (
-              <div key={i} className="w-5 h-5 rounded-full"
+              <div key={i} className="w-5 h-5 md:w-6 md:h-6 rounded-full"
                 style={{ backgroundColor: c, boxShadow: 'inset 0 -2px 4px rgba(0,0,0,0.15), 0 2px 6px rgba(0,0,0,0.1)' }} />
             ))}
           </div>
         </div>
-        <h1 className="soft-title text-3xl text-center leading-tight">
+        <h1 className="soft-title text-2xl md:text-4xl lg:text-5xl text-center leading-tight">
           拼豆图纸生成器
         </h1>
-        <p className="mt-2 text-sm text-slate-500 text-center font-medium">
+        <p className="mt-1 md:mt-2 text-xs md:text-sm text-slate-500 text-center font-medium">
           照片一键变图纸 · 色号更少更好拼
         </p>
       </header>
 
       {/* 页面导航 */}
       {page !== 'gallery' && (
-        <nav className="relative z-10 w-full max-w-md px-4 mb-3">
+        <nav className="relative z-10 w-full max-w-md md:max-w-2xl lg:max-w-4xl px-4 mb-3">
           <div className="flex items-center gap-2">
             {page !== 'upload' && (
               <button onClick={goToGallery}
@@ -187,7 +187,7 @@ export default function App() {
         </nav>
       )}
 
-      <main className="relative z-10 w-full max-w-md flex flex-col items-center px-4 space-y-5 pb-8">
+      <main className="relative z-10 w-full max-w-md md:max-w-2xl lg:max-w-4xl flex flex-col items-center px-4 space-y-5 pb-8">
 
         {/* ========== 作品集页面 ========== */}
         {page === 'gallery' && (
@@ -195,7 +195,7 @@ export default function App() {
             <div className="w-full">
               <h2 className="text-lg font-bold text-slate-700 mb-3">作品集</h2>
               <p className="text-sm text-slate-400 mb-4">看看别人用拼豆图纸做了什么</p>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 {EXAMPLES.map((ex, i) => (
                   <div key={i} className="soft-card overflow-hidden cursor-pointer hover:scale-[1.02] transition-transform"
                     onClick={goToUpload}>
@@ -225,7 +225,7 @@ export default function App() {
         {page === 'upload' && (
           <>
             <div onClick={() => fileRef.current?.click()}
-              className="soft-upload w-full p-12 text-center cursor-pointer">
+              className="soft-upload w-full p-10 md:p-16 text-center cursor-pointer">
               <svg className="h-14 w-14 text-purple-300 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
               </svg>
@@ -405,7 +405,7 @@ export default function App() {
 
       </main>
 
-      <footer className="relative z-10 w-full max-w-md mx-4 mt-auto mb-4">
+      <footer className="relative z-10 w-full max-w-md md:max-w-2xl lg:max-w-4xl mx-4 mt-auto mb-4">
         <div className="soft-footer py-3 px-4 text-center">
           <p className="text-xs text-slate-400 font-medium">拼豆图纸生成器 &copy; {new Date().getFullYear()}</p>
         </div>
