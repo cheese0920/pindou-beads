@@ -18,6 +18,8 @@ const EXAMPLES = [
   { src: '/assets/gallery-4.jpg', title: '双人姐妹', grid: '52×83', colors: 8 },
   { src: '/assets/gallery-5.jpg', title: '绿鹦鹉', grid: '52×83', colors: 10 },
   { src: '/assets/gallery-6.jpg', title: '黑白企鹅', grid: '52×83', colors: 6 },
+  { src: '/assets/gallery-7.png', title: '小蘑菇', grid: '52×83', colors: 12 },
+  { src: '/assets/gallery-8.jpg', title: '彩色图案', grid: '52×83', colors: 24 },
 ];
 
 export default function App() {
