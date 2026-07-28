@@ -5,8 +5,8 @@ perler-beads/
 node_modules/
 .npm-cache/
 
-# 构建产物
-dist/
+# 构建产物（ModelSpace 部署需要提交 dist）
+# dist/
 
 # 工作台配置
 .workbuddy/
